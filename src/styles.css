@@ -1,1 +1,143 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.test{
+    @apply text-center;
+  }
+  
+  *,*:after,*:before{
+      @apply p-0 m-0 border-0 outline-0 gap-0 max-w-full max-h-full;
+      box-sizing:border-box;    
+      transition-duration: .3s;
+      transition-timing-function:ease-out;
+      text-decoration:none;   
+  }
+  body{
+      
+      font-family: 'Ubuntu', sans-serif;
+  }
+  body div{
+    
+  }
+  img{
+      @apply max-w-full h-auto;    
+  }
+  
+  .spinner {
+      @apply fixed z-20;
+      position:fixed;
+      top:45%;
+      left:45%;
+      border: 16px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 16px solid blue;
+      border-right: 16px solid green;
+      border-bottom: 16px solid red;
+      border-left: 16px solid pink;
+      width: 10%;
+      height: 10%;    
+      animation: spinner .3s ease-out 0s infinite alternate forwards running;
+      -webkit-animation: spinner .3s ease-out 0s infinite alternate forwards running;    
+      -moz-animation: spinner .3s ease-out 0s infinite alternate forwards running;    
+    }
+  
+  .spinner_background{
+      @apply fixed left-0 top-0 w-full h-full opacity-100 z-10;
+      background-color:rgba(0,0,0,0.5);    
+    }
+    
+    .sticky_navbar{
+    @apply fixed py-3 w-full;  
+  transition: all .3s ease-out;    
+  left:0;
+  top:0;
+}
+.not_sticky_navbar{  
+  transition:all .3s ease-out;  
+}
+
+    input::placeholder{
+      @apply text-sm;
+    }
+    input:focus{
+      @apply outline-0; 
+    }
+    input{
+      @apply text-sm px-4 py-2 border-2 border-blue-300;
+    }
+    input:focus{
+      @apply border-2 border-blue-700;    
+    }
+    .button_style_and_animation{
+      @apply px-2 py-1 rounded-md border-2 bg-blue-700 border-blue-300 text-blue-300 hover:border-blue-700 hover:bg-blue-700 hover:text-white active:translate-y-0.5;
+    }
+    
+    .button_style_and_animation1{
+      @apply px-2 py-1 rounded-md border-2 bg-blue-700 border-blue-500 text-blue-500 hover:border-blue-700 hover:bg-blue-700 hover:text-white active:translate-y-0.5;
+    }
+    .active_nav_tab{
+      @apply px-2 py-1 rounded-md border-2 border-blue-700 bg-blue-700 text-white active:translate-y-0.5;
+    }
+    .i_flip_style_and_animation{
+      @apply cursor-pointer hover:rotate-180 active:translate-y-0.5;
+    }
+
+    .Y_axis_open{
+      animation : animation_Y_axis_open .8s ease-out 0s 1 alternate forwards running;
+      -webkit-animation : animation_Y_axis_open .8s ease-out 0s 1 alternate forwards running;
+      -moz-animation : animation_Y_axis_open .8s ease-out 0s 1 alternate forwards running;
+    }
+    .Y_axis_close{
+      animation : animation_Y_axis_close .8s ease-out 0s 1 alternate forwards running;
+      -webkit-animation : animation_Y_axis_close .8s ease-out 0s 1 alternate forwards running;
+      -moz-animation : animation_Y_axis_close .8s ease-out 0s 1 alternate forwards running;
+    }
+  
+    @keyframes spinner {
+      0% { transform: rotate(0deg) scale(0.3)}
+      33% { transform: rotate(360deg) scale(1)}
+      66% { transform: rotate(-360deg) scale(0.3)}
+      100% { transform: rotate(0) scale(1)}
+    }
+    
+    @-webkit-keyframes spinner {
+      0% { transform: rotate(0deg) scale(0.3)}
+      33% { transform: rotate(360deg) scale(1)}
+      66% { transform: rotate(-360deg) scale(0.3)}
+      100% { transform: rotate(0) scale(1)}
+    }
+    @-moz-keyframes spinner {
+      0% { transform: rotate(0deg) scale(0.3)}
+      33% { transform: rotate(360deg) scale(1)}
+      66% { transform: rotate(-360deg) scale(0.3)}
+      100% { transform: rotate(0) scale(1)}
+    }
+    @keyframes animation_Y_axis_open{
+      0%{height:0}
+      100%{height:100%}
+    }
+    @-webkit-keyframes animation_Y_axis_open{
+      0%{height:0}
+      100%{height:100%}
+    }
+    @-moz-keyframes animation_Y_axis_open{
+      0%{height:0}
+      100%{height:100%}
+    }
+    
+    @keyframes animation_Y_axis_close{
+      0%{height:100%}
+      100%{height:0}
+    
+    }
+    @-webkit-keyframes animation_Y_axis_close{
+      0%{height:100%}
+      100%{height:0}
+    
+    }
+    @-moz-keyframes animation_Y_axis_close{
+      0%{height:100%}
+      100%{height:0}
+    
+    }
