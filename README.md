@@ -1,3 +1,5 @@
+#This project hasn't finished yet because my new fucking laptop gives blue screen errors! I will bring my device to the service and after solving this problem, i will finish it. I hate my fucking luck.
+
 # PokemonApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
